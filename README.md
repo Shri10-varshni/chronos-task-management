@@ -11,8 +11,6 @@ Notifications: Sends reminders about upcoming tasks using RabbitMQ.
 
 Microservices Architecture: Each feature is encapsulated in its own service.
 
-Containerization with Docker: All services are containerized for easy local deployment.
-
 Asynchronous Communication: Microservices communicate asynchronously using RabbitMQ and Redis.
 
 JWT Authentication: Secure access using token-based authentication
