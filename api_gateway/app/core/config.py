@@ -21,6 +21,10 @@ class Settings(BaseSettings):
     # Redis settings
     REDIS_URL: str = "redis://localhost:6379/0"
     
+    # API settings
+    DEFAULT_PAGE_SIZE: int = 20
+    MAX_PAGE_SIZE: int = 100
+    
     class Config:
         case_sensitive = True
         env_file = ".env"

@@ -1,8 +1,22 @@
+import sys
+import os
+
+# Add shared package to Python path
+shared_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+sys.path.insert(0, shared_path)
+
 import uvicorn
+from dotenv import load_dotenv
 from fastapi import FastAPI
 from app.api.routes import router as api_router
 from app.core.config import settings
 from app.db.database import engine, Base
+
+# Load environment variables from .env file
+load_dotenv()
+
+# Debug: Print Python path
+print("Python path:", sys.path)
 
 # Create database tables
 Base.metadata.create_all(bind=engine)
